@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Principal</title>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.pinimg.com/564x/5b/eb/d8/5bebd89f1388cd0d68168519ef5e2ff7.jpg'); /* Agrega la URL de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .boton-corazon {
+    width: 400px; /* Tamaño más grande */
+    height: 400px; /* Tamaño más grande */
+    background-image: url('https://i.pinimg.com/originals/29/57/f7/2957f7c7d2ef62de281dac2765bb7acb.gif');
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .boton-corazon:hover {
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el ratón */
+  }
+  .indicativo-click {
+    position: absolute;
+    bottom: 20px; /* Posición ajustada */
+    width: 100%;
+    text-align: center;
+  }
+  .indicativo-click img {
+    width: 50px; /* Tamaño de la imagen */
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<div class="boton-corazon" onclick="window.location.href='index.html';">
+  <div class="indicativo-click">
+    <img src="https://static.vecteezy.com/system/resources/previews/010/366/227/non_2x/computer-mouse-click-transparent-free-png.png" alt="Haz clic aquí"> <!-- Reemplaza con la URL de tu imagen -->
+  </div>
+</div>
+<script>
+  // Puedes agregar aquí JavaScript si necesitas más interactividad
+</script>
+</body>
+</html>

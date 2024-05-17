@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un Viaje al Corazón</title>
+<style>
+    .marco {
+  border: 5px solid #fff;
+  padding: 10px;
+  display: inline-block;
+  margin: 20px;
+  background-color: #fff; /* Asegúrate de que el fondo sea blanco */
+}
+
+.imagen-flor {
+  width: 200px; /* Controla el tamaño de la imagen */
+  height: auto;
+  margin: 0px;
+  display: block /* Asegura que la imagen no se desborde del marco */
+}
+  body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://i.pinimg.com/564x/ed/4a/f0/ed4af0bb9ab2bd81b14f6723cb11408b.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    background-blend-mode: multiply;
+    background-color: rgba(255, 20, 147, 0.6);
+  }
+  h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #000;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px #000;
+  }
+  .boton {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 3px 3px 6px #000;
+    transition: background-color 0.3s ease;
+  }
+  .boton:hover {
+    background-color: #ff1493;
+  }
+  .corazon {
+    color: #ff1493;
+    font-size: 3em;
+    position: fixed;
+    animation: caida 5s linear infinite;
+  }
+  @keyframes caida {
+    0% { top: -5%; }
+    100% { top: 100%; }
+  }
+  .contenedor-botones {
+    margin-top: 20px;
+  }
+  .boton-no {
+    position: relative;
+    transition: top 0.5s, left 0.5s;
+  }
+</style>
+<script>
+  function botonSi() {
+    for (var i = 0; i < 30; i++) {
+      var corazon = document.createElement('div');
+      corazon.innerHTML = '❤️';
+      corazon.classList.add('corazon');
+      corazon.style.left = Math.random() * 100 + 'vw';
+      corazon.style.animationDuration = Math.random() * 3 + 2 + 's';
+      document.body.appendChild(corazon);
+    }
+  }
+
+  function botonNo() {
+    var boton = document.getElementById('botonNo');
+    boton.style.top = (Math.random() * window.innerHeight - boton.clientHeight) + 'px';
+    boton.style.left = (Math.random() * window.innerWidth - boton.clientWidth) + 'px';
+  }
+</script>
+</head>
+<body>
+    <div class="marco">
+      <img src="https://i.pinimg.com/474x/d7/67/cf/d767cf9bd238618e71a3b88f6d802458.jpg" alt="Flor" class="imagen-flor">
+    </div>
+    <h1>Táctica y estrategia</h1>
+    <p>"Mi táctica es mirarte<br>
+       aprender como sos<br>
+       quererte como sos...<br>
+       mi estrategia es que un día cualquiera<br>
+       no sé cómo ni sé con qué pretexto<br>
+       pero quedarme en vos."</p>
+    <h1>Hagamos un trato</h1>
+    <p>"Compañera usted sabe<br>
+       que puede contar conmigo<br>
+       no hasta dos o hasta diez<br>
+       sino contar conmigo...<br>
+       es tan lindo saber que usted existe<br>
+       uno se siente vivo<br>
+       y cuando digo esto<br>
+       quiero decir contar<br>
+       aunque sea hasta dos<br>
+       aunque sea hasta cinco."</p>
+    <h1>No te rindas</h1>
+    <p>"No te rindas, aun estás a tiempo<br>
+       de alcanzar y comenzar de nuevo,<br>
+       aceptar tus sombras, enterrar tus miedos,<br>
+       liberar el lastre, retomar el vuelo...<br>
+       porque no estás sola, porque yo te quiero."</p>
+    <button class="boton" onclick="alert('¡Dijiste que sí!')">Quiere ser mi novia?</button>
+    <div class="contenedor-botones">
+      <button class="boton" onclick="botonSi()">Sí</button>
+      <button id="botonNo" class="boton boton-no" onmouseover="botonNo()">No</button>
+    </div>
+    <div class="marco">
+      <img src="https://i.pinimg.com/564x/22/c1/19/22c119b9767854d3885e31bf1fd2d1c4.jpg" alt="Mariposa" class="imagen-flor">
+    </div>
+  </body>
+  </html>
